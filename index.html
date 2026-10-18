@@ -1,1 +1,757 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari Prasad R | Training Modules</title>
+
+    <meta name="description" content="Explore professional training modules by Hari Prasad R in leadership, communication, personal development and soft skills.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --navy: #101d35;
+            --navy-light: #192c4b;
+            --gold: #d9b66f;
+            --gold-light: #f2dfb0;
+            --white: #ffffff;
+            --background: #f5f7fb;
+            --text: #27354a;
+            --muted: #788397;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1120px, 90%);
+            margin: auto;
+        }
+
+        /* NAVIGATION */
+
+        header {
+            background: var(--navy);
+            color: var(--white);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        nav {
+            min-height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            font-family: 'Manrope', sans-serif;
+            font-size: 21px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--gold);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            font-size: 14px;
+            color: #d8dfeb;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-button {
+            padding: 11px 20px;
+            background: var(--gold);
+            color: var(--navy);
+            border-radius: 6px;
+            font-weight: 700;
+        }
+
+        /* HERO */
+
+        .hero {
+            background:
+                radial-gradient(ellipse at 85% 15%, #263d60 0%, transparent 40%),
+                var(--navy);
+            color: var(--white);
+            padding: 105px 0 110px;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 780px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            color: var(--gold-light);
+            border: 1px solid rgba(217,182,111,0.45);
+            background: rgba(217,182,111,0.08);
+            border-radius: 50px;
+            padding: 7px 15px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            margin-bottom: 27px;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 6vw, 70px);
+            line-height: 1.12;
+            letter-spacing: -2.5px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero p {
+            color: #c5cfdf;
+            max-width: 600px;
+            font-size: 17px;
+            line-height: 1.9;
+            margin-bottom: 34px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 24px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.25s ease;
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid #53647e;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        /* INTRO STRIP */
+
+        .intro-strip {
+            background: white;
+            border-bottom: 1px solid #e8ecf3;
+            padding: 25px 0;
+        }
+
+        .strip-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
+
+        .strip-label {
+            color: var(--muted);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .strip-item {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        /* GENERAL SECTIONS */
+
+        section.content-section {
+            padding: 90px 0;
+        }
+
+        .section-heading {
+            max-width: 650px;
+            margin-bottom: 42px;
+        }
+
+        .section-label {
+            color: #a77c32;
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(30px, 4vw, 43px);
+            color: var(--navy);
+            line-height: 1.25;
+            letter-spacing: -1px;
+            margin-bottom: 15px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        /* TRAINING CARDS */
+
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .module-card {
+            background: white;
+            border: 1px solid #e7ebf2;
+            border-radius: 12px;
+            padding: 29px;
+            min-height: 245px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            transition: 0.25s ease;
+        }
+
+        .module-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+            box-shadow: 0 16px 35px rgba(16,29,53,0.07);
+        }
+
+        .module-number {
+            width: 45px;
+            height: 45px;
+            display: grid;
+            place-items: center;
+            border-radius: 9px;
+            background: #f7f0e2;
+            color: #99712e;
+            font-weight: 800;
+            margin-bottom: 23px;
+        }
+
+        .module-card h3 {
+            color: var(--navy);
+            font-size: 19px;
+            margin-bottom: 10px;
+        }
+
+        .module-card p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .module-link {
+            margin-top: auto;
+            color: #9a742e;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        /* ABOUT */
+
+        .about {
+            background: white;
+            border-top: 1px solid #e8ecf3;
+            border-bottom: 1px solid #e8ecf3;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            align-items: center;
+            gap: 65px;
+        }
+
+        .about-visual {
+            background: var(--navy);
+            color: white;
+            padding: 45px;
+            border-radius: 14px;
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-visual::before {
+            content: "";
+            position: absolute;
+            width: 220px;
+            height: 220px;
+            border: 1px solid rgba(217,182,111,0.5);
+            border-radius: 50%;
+            top: -75px;
+            right: -65px;
+            box-shadow: 0 0 0 30px rgba(217,182,111,0.05),
+                        0 0 0 60px rgba(217,182,111,0.04);
+        }
+
+        .about-visual .quote-mark {
+            font-family: Georgia, serif;
+            font-size: 70px;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .about-visual h3 {
+            font-size: 25px;
+            line-height: 1.45;
+            margin: 18px 0;
+            position: relative;
+        }
+
+        .about-visual span {
+            color: var(--gold);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .about-copy h2 {
+            color: var(--navy);
+            font-size: 36px;
+            line-height: 1.25;
+            margin-bottom: 20px;
+        }
+
+        .about-copy p {
+            color: var(--muted);
+            font-size: 15px;
+            margin-bottom: 17px;
+        }
+
+        .about-points {
+            list-style: none;
+            margin: 24px 0 30px;
+        }
+
+        .about-points li {
+            margin: 12px 0;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .about-points li::before {
+            content: "✓";
+            color: #a77c32;
+            font-weight: 800;
+            margin-right: 12px;
+        }
+
+        /* CTA */
+
+        .cta-section {
+            padding: 75px 0;
+            background: var(--navy-light);
+            text-align: center;
+            color: white;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(30px, 4vw, 42px);
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            color: #c5cfdf;
+            margin: 0 auto 28px;
+            max-width: 600px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #0b1527;
+            color: #b6c0d0;
+            padding: 27px 0;
+            font-size: 12px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .footer-brand {
+            color: white;
+            font-weight: 700;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 850px) {
+            .modules-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 580px) {
+            nav {
+                min-height: 72px;
+            }
+
+            .logo {
+                font-size: 17px;
+            }
+
+            .nav-links a:not(.nav-button) {
+                display: none;
+            }
+
+            .nav-button {
+                padding: 9px 12px;
+                font-size: 12px;
+            }
+
+            .hero {
+                padding: 75px 0;
+            }
+
+            .hero h1 {
+                letter-spacing: -1.5px;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            section.content-section {
+                padding: 65px 0;
+            }
+
+            .modules-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .module-card {
+                min-height: 220px;
+            }
+
+            .about-visual {
+                padding: 30px;
+                min-height: 280px;
+            }
+
+            .about-copy h2 {
+                font-size: 30px;
+            }
+
+            .strip-content {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">HARI PRASAD <span>R.</span></a>
+
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#modules">Training Modules</a>
+                    <a href="#about">About</a>
+                    <a href="#contact" class="nav-button">Get in Touch</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="eyebrow">Learn · Practice · Lead</div>
+
+                <h1>
+                    Build Skills.<br>
+                    Shape Your <span>Future.</span>
+                </h1>
+
+                <p>
+                    Practical training experiences designed to strengthen
+                    communication, develop leadership, improve confidence,
+                    and help individuals unlock their potential.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#modules" class="btn btn-primary">
+                        Explore Training Modules →
+                    </a>
+
+                    <a href="#about" class="btn btn-outline">
+                        Know the Trainer
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTRO STRIP -->
+    <div class="intro-strip">
+        <div class="container strip-content">
+            <div class="strip-label">Areas of Development</div>
+            <div class="strip-item">Leadership</div>
+            <div class="strip-item">Communication</div>
+            <div class="strip-item">Personal Growth</div>
+            <div class="strip-item">Professional Skills</div>
+        </div>
+    </div>
+
+    <!-- TRAINING MODULES -->
+    <section class="content-section" id="modules">
+        <div class="container">
+
+            <div class="section-heading">
+                <div class="section-label">Explore & Develop</div>
+
+                <h2>Training Modules</h2>
+
+                <p>
+                    Explore the learning sessions and training programmes
+                    designed to turn knowledge into practical skills.
+                </p>
+            </div>
+
+            <div class="modules-grid">
+
+                <!-- MODULE 01 -->
+                <article class="module-card">
+                    <div class="module-number">01</div>
+                    <h3>Communication Skills</h3>
+                    <p>
+                        Express your thoughts clearly, listen effectively,
+                        and communicate with confidence.
+                    </p>
+                    <a href="#contact" class="module-link">
+                        Explore Module →
+                    </a>
+                </article>
+
+                <!-- MODULE 02 -->
+                <article class="module-card">
+                    <div class="module-number">02</div>
+                    <h3>Leadership Development</h3>
+                    <p>
+                        Understand leadership, take initiative, and learn
+                        to guide people towards shared goals.
+                    </p>
+                    <a href="#contact" class="module-link">
+                        Explore Module →
+                    </a>
+                </article>
+
+                <!-- MODULE 03 -->
+                <article class="module-card">
+                    <div class="module-number">03</div>
+                    <h3>Body Language</h3>
+                    <p>
+                        Develop positive non-verbal communication through
+                        posture, eye contact, gestures, and expression.
+                    </p>
+                    <a href="#contact" class="module-link">
+                        Explore Module →
+                    </a>
+                </article>
+
+                <!-- MODULE 04 -->
+                <article class="module-card">
+                    <div class="module-number">04</div>
+                    <h3>Self-Confidence</h3>
+                    <p>
+                        Build self-belief, manage hesitation, and present
+                        yourself with greater confidence.
+                    </p>
+                    <a href="#contact" class="module-link">
+                        Explore Module →
+                    </a>
+                </article>
+
+                <!-- MODULE 05 -->
+                <article class="module-card">
+                    <div class="module-number">05</div>
+                    <h3>Time Management</h3>
+                    <p>
+                        Prioritise responsibilities, organise your time,
+                        and develop productive work habits.
+                    </p>
+                    <a href="#contact" class="module-link">
+                        Explore Module →
+                    </a>
+                </article>
+
+                <!-- MODULE 06 -->
+                <article class="module-card">
+                    <div class="module-number">06</div>
+                    <h3>Discipline & Mindset</h3>
+                    <p>
+                        Strengthen consistency, develop resilience, and
+                        create habits that support long-term growth.
+                    </p>
+                    <a href="#contact" class="module-link">
+                        Explore Module →
+                    </a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT THE TRAINER -->
+    <section class="content-section about" id="about">
+        <div class="container about-grid">
+
+            <div class="about-visual">
+                <div class="quote-mark">“</div>
+                <h3>
+                    Leadership is not just about leading people.
+                    It is about creating positive change.
+                </h3>
+                <span>HARI PRASAD R.</span>
+            </div>
+
+            <div class="about-copy">
+                <div class="section-label">About the Trainer</div>
+
+                <h2>Learning That Creates Impact</h2>
+
+                <p>
+                    Welcome to my training space. I believe that every
+                    individual has the potential to grow when given the
+                    right knowledge, guidance, and opportunities to practise.
+                </p>
+
+                <p>
+                    My sessions focus on practical learning, interactive
+                    activities, personal development, and skills that can
+                    be applied in everyday life and professional settings.
+                </p>
+
+                <ul class="about-points">
+                    <li>Interactive and practical learning</li>
+                    <li>Leadership and professional development</li>
+                    <li>Communication and interpersonal skills</li>
+                    <li>Personal growth and continuous improvement</li>
+                </ul>
+
+                <a href="#modules" class="btn btn-primary">
+                    Discover My Modules
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section class="cta-section" id="contact">
+        <div class="container">
+            <h2>Ready to Learn and Grow?</h2>
+
+            <p>
+                Looking for a training session, workshop, or learning
+                experience? Connect with me to discuss your requirements.
+            </p>
+
+            <!-- Replace the email below with your actual email address -->
+            <a href="mailto:your-email@example.com"
+               class="btn btn-primary">
+                Contact the Trainer →
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                HARI PRASAD R. | Training & Development
+            </div>
+
+            <div>
+                © <span id="year"></span> Hari Prasad R. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html>
+
